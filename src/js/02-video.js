@@ -10,8 +10,8 @@ function getCurrentTimeKey(timeKey){
 }
 player.on('timeupdate', throttle(getCurrentTimeKey, 1000));
 
-const currentTimeValue = localStorage.getItem(CURRENT_TIME_KEY || 0);
-player.setCurrentTime(currentTimeValue);
+const currentTimeValue = localStorage.getItem(CURRENT_TIME_KEY);
+player.setCurrentTime(currentTimeValue || 0);
 
 
 // v.1
